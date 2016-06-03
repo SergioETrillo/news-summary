@@ -2,7 +2,9 @@
   "name": "news-summary",
   "version": "0.1.0",
   "description": "Browse a summary of the news",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "start-app": "cd app && ../node_modules/http-server/bin/http-server",
     "start-selenium": "./node_modules/protractor/bin/webdriver-manager start",
     "install-selenium-dependencies": "./node_modules/protractor/bin/webdriver-manager update",
@@ -19,7 +21,8 @@
     "karma-chrome-launcher": "^1.0.1",
     "karma-cli": "^1.0.0",
     "karma-jasmine": "^1.0.2",
-    "protractor": "^3.3.0"
+    "protractor": "^3.3.0",
+    "express": "^4.13.3"
   },
   "devDependencies": {
     "aylien_textapi": "^0.6.0",
