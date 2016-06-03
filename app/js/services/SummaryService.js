@@ -6,7 +6,7 @@ newsSummaryApp.service("SummaryService", ["SummaryFactory", "$http", function(Su
   };
 
   function _iterateThrough (response) {
-    console.log(response);
+    // console.log(response.data.response.results[0].fields.thumbnail);
     var articles = [];
     response.data.response.results.forEach(function(object) {
       articles.push(new SummaryFactory(object.webTitle, object.webPublicationDate, object.fields.thumbnail));
