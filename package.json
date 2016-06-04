@@ -4,7 +4,7 @@
   "description": "Browse a summary of the news",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "cd app && ../node_modules/http-server/bin/http-server",
     "start-app": "cd app && ../node_modules/http-server/bin/http-server",
     "start-selenium": "./node_modules/protractor/bin/webdriver-manager start",
     "install-selenium-dependencies": "./node_modules/protractor/bin/webdriver-manager update",

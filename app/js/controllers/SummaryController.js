@@ -1,8 +1,11 @@
 newsSummaryApp.controller("SummaryAppController", ["SummaryFactory", "SummaryService", function(SummaryFactory, SummaryService) {
   var self = this;
+  console.log("2");
 
   SummaryService.getAll().then(function(response) {
+    console.log("1");
     self.articles = response;
+      console.log("3");
   });
 
   // this.addSummary = function(todoText) {

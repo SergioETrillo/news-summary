@@ -10,16 +10,16 @@
     <script src="js/controllers/SummaryController.js"></script>
     <script src="js/services/SummaryFactory.js"></script>
     <script src="js/services/SummaryService.js"></script>
-    <title>News Summary</title>
+    <title>Specific article</title>
   </head>
 
   <body>
     <div style="text-align: center;" ng-controller="SummaryAppController as controller">
       <h1>News finder</h1>
-      <div ng-repeat="article in controller.articles">
-        <h3 > <a href="/summary.html" ng-click="article"> {{ article.webTitle }}</a></h3>
-        <p> {{article.pubDate | date:'medium'}} </p>
-        <img ng-src="{{article.picture}}">
+      <div>
+        <h3> {{ article.webTitle }} </h3>
+        <!-- <p> {{article.pubDate | date:'medium'}} </p>
+        <!-- <img ng-src="{{article.picture}}"> -->
         <!-- <p ng-bind-html="article.content"></p> -->
         <!-- <p>{{ article.summary.join() }}</p> -->
       </div>
