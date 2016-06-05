@@ -1,1 +1,1 @@
-var newsSummaryApp = angular.module("newsSummaryApp", ['env', 'ngSanitize']);
+var newsSummaryApp = angular.module("newsSummaryApp", ['env', 'ngSanitize', 'ngRoute']);

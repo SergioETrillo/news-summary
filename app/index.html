@@ -4,12 +4,14 @@
   <head>
     <meta charset="utf-8">
     <script src="bower_components/angular/angular.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-sanitize.js"></script>
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
     <script src="env.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers/SummaryController.js"></script>
     <script src="js/services/SummaryFactory.js"></script>
     <script src="js/services/SummaryService.js"></script>
+    <script src="js/providers/routeProvider.js"></script>
     <title>News Summary</title>
   </head>
 
@@ -17,12 +19,28 @@
     <div style="text-align: center;" ng-controller="SummaryAppController as controller">
       <h1>News finder</h1>
       <div ng-repeat="article in controller.articles">
-        <h3 > <a href="/summary.html" ng-click="article"> {{ article.webTitle }}</a></h3>
+        <h3 > <a href="#"> {{ article.webTitle }}</a></h3>
         <p> {{article.pubDate | date:'medium'}} </p>
         <img ng-src="{{article.picture}}">
+        <a href="ShowArticle/{{$index}}">show article</a>
         <!-- <p ng-bind-html="article.content"></p> -->
         <!-- <p>{{ article.summary.join() }}</p> -->
       </div>
+      <!-- Forma de llamar un parámetro de un artículo [0] -->
+      <!-- asi que hay que hacer una nueva página que cuando se llame simplemente muestre: -->
+      <!-- controller.articles[id].webTitle -->
+      <!-- <img ng-src="{{controller.articles[id].picture}}"> -->
+      <!-- controller.articles[id].summary.join() -->
+      <!-- y hay que poner un link al artículo verdadero, y links para volver a la página index -->
+      <!-- el id se tiene que obtener a partir del controller, (nuevo controller?) -->
+      <!-- http://viralpatel.net/blogs/angularjs-routing-and-views-tutorial-with-example/ -->
+      <!--       sampleApp.controller('ShowOrderController', function($scope, $routeParams) {
+
+          $scope.order_id = $routeParams.orderId;
+
+      }); -->
+      <p> {{controller.articles[0].webTitle}}</p>
+
     </div>
   </body>
 </html>

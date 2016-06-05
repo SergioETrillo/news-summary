@@ -1,11 +1,12 @@
-newsSummaryApp.controller("SummaryAppController", ["SummaryFactory", "SummaryService", function(SummaryFactory, SummaryService) {
+newsSummaryApp.controller("SummaryAppController", ["SummaryFactory", "SummaryService", function(SummaryFactory, SummaryService, $scope, $routeParams) {
   var self = this;
-  console.log("2");
+  // console.log("2");
+  // $scope.article_id = $routeParams.articleId;
 
   SummaryService.getAll().then(function(response) {
-    console.log("1");
+    // console.log("1");
     self.articles = response;
-      console.log("3");
+      // console.log("3");
   });
 
   // this.addSummary = function(todoText) {
