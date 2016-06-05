@@ -1,0 +1,26 @@
+    <div style="text-align: center;" ng-controller="SummaryAppController as controller">
+      <h1>News finder</h1>
+      <div ng-repeat="article in controller.articles">
+        <h3 > <a href="#/showArticle/{{$index}}"> {{ article.webTitle }}</a></h3>
+        <p> {{article.pubDate | date:'medium'}} </p>
+        <img ng-src="{{article.picture}}">
+        <!-- <a href="#/showArticle/{{$index}}">show article</a> -->
+        <!-- <p ng-bind-html="article.content"></p> -->
+        <!-- <p>{{ article.summary.join() }}</p> -->
+      </div>
+      <!-- Forma de llamar un parámetro de un artículo [0] -->
+      <!-- asi que hay que hacer una nueva página que cuando se llame simplemente muestre: -->
+      <!-- controller.articles[id].webTitle -->
+      <!-- <img ng-src="{{controller.articles[id].picture}}"> -->
+      <!-- controller.articles[id].summary.join() -->
+      <!-- y hay que poner un link al artículo verdadero, y links para volver a la página index -->
+      <!-- el id se tiene que obtener a partir del controller, (nuevo controller?) -->
+      <!-- http://viralpatel.net/blogs/angularjs-routing-and-views-tutorial-with-example/ -->
+      <!--       sampleApp.controller('ShowOrderController', function($scope, $routeParams) {
+
+          $scope.order_id = $routeParams.orderId;
+
+      }); -->
+      <!-- <p> {{controller.articles[0].webTitle}}</p> -->
+
+    </div>

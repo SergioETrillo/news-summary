@@ -1,0 +1,9 @@
+<div style="text-align: center;" ng-controller="SummaryAppController as controller">
+
+      <img ng-src="{{controller.articles[[article_id]].picture}}">
+      <h2> {{controller.articles[[article_id]].webTitle}}</h2>
+      <p><a href="{{controller.articles[[article_id]].webUrl}}">Full Article</a></p>
+      <p> {{controller.articles[[article_id]].pubDate | date:'medium'}} </p>
+      <p ng-bind-html="controller.articles[[article_id]].content"></p>
+
+</div>
